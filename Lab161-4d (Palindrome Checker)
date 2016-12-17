@@ -1,4 +1,4 @@
-// Lab-4d 
+// Lab161-4d 
 // Palindrome Checker
 // Write a Java program that will determine if a String, called text, is a palindrome. 
 // A String is a palindrome if the word remains the same when spelled in reverse,For example: 
