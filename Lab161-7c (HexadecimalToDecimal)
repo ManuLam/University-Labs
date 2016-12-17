@@ -1,0 +1,30 @@
+// Lab161-7c
+// HexadecimalToDecimal
+// Write a Java program that converts a hexadecimal number to a decimal number and prints the decimal number to the screen. 
+// Use keyboard input to provide the value for the hexadecimal number.
+
+import java.util.Scanner;
+public class hexToDec {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    String l = input.next();
+    int h  = l.length()-1;
+    int num=0 , i=0 , result=0; 
+    int r=h;
+    
+    while(i<=h) {
+        char c = l.charAt(i);
+        num = (c=='A') ? 10:0;
+        num = (c=='B') ? 11:0;
+        num = (c=='C') ? 12:0;
+        num = (c=='D') ? 13:0;
+        num = (c=='E') ? 14:0;
+        num = (c=='F') ? 15: Character.getNumericValue(c);
+        result += (int)(num*Math.pow(16,r)); 
+        i++; r--;
+       }
+    
+    System.out.println(result);
+    
+    }
+}
