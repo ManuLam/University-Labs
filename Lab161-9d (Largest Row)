@@ -1,0 +1,32 @@
+// Lab161-9d
+// Largest Row
+// Write a Java program that will: 
+// Create a square integer 2D array of a size that is decided by user input.
+// Allow the user to fill the array with integers of their choice.
+// Determine which row has the largest sum. 
+// Print to the screen a string starting with "R" and then the number of the row with no spaces. For example "R2".
+
+import java.util.Scanner;
+public class LargestRow {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int n = input.nextInt();
+    int total = 0, BiggestRow = 0, row = 0;
+    int[][] ary = new int[n][n];
+    
+    for(int i=0; i<n; i++) {
+        row = 0;
+        for(int j=0; j<n; j++) {
+            ary[i][j] = input.nextInt();
+            row += ary[i][j];
+         }
+            if(row>total) {
+                total = row;
+                BiggestRow = i+1;
+            }
+      }
+      
+      System.out.println("R"+BiggestRow);
+      
+    }
+}   
