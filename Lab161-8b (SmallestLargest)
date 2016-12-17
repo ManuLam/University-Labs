@@ -1,4 +1,4 @@
-// Lab161-9b
+// Lab161-8b
 // SmallestLargest
 // Write a java program where the largest number in an array gets swapped with the last element in an array, 
 // and the smallest element in an array gets swapped with the first element in the array. The array's size will be decided 
