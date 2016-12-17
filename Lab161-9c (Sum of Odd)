@@ -1,0 +1,33 @@
+// Lab161-9c
+// Sum of Odd
+// Write a Java program that will: 
+// Create a 2D array of a size that is decided by user input - the first number being the number of rows and the second number 
+// being the number of columns.
+// Allow the user to fill the array with integers of their choice.
+// Print to the screen the total number of odd numbers in the array. See the sample output for the format.
+// The sum of all the odd numbers in the array. See the sample output for the format.
+
+import java.util.Scanner;
+public class SumOfOdd {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int rows = input.nextInt();
+    int columns = input.nextInt();
+    int sum = 0 , count = 0;
+    int[][] ary = new int[rows][columns];
+    
+    for(int i=0; i<rows; i++) {
+        for(int j=0; j<columns; j++) {
+            ary[i][j] = input.nextInt();
+            if(ary[i][j]%2!=0) {
+                count++;
+                sum += ary[i][j];
+            }
+        }
+      }
+      
+      System.out.println("Odd number count = "+count);
+      System.out.println("Sum of odd numbers = "+sum);
+      
+    }
+}
