@@ -1,0 +1,38 @@
+// Lab161-8d
+// Even Numbers
+// Write a Java program that will create an array of size 10 and into it put the first 10 even numbers greater than the 
+// given user input. The user should then be able to repeatedly enter a number and the program should print out the array value
+// at that position to the screen. If an invalid entry is entered an appropriate message should be printed to the screen.
+// The program should stop the user inputting an element position when they enter -1.
+
+import java.util.Scanner;
+public class EvenArrays {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int size = input.nextInt();
+    int[] array = new int[10];
+    int number = 0 , finish = size+20;
+    int num = size;
+    int temp = 0;
+    boolean loop = true;
+    
+    for(int i=0; i<10; i++) {
+        if(num%2==1) { num -= 1;}
+        num += 2;
+        array[i] = num;
+    }
+    while(loop == true) {
+        number = input.nextInt();
+        if(number==-1) {
+            break;
+        }
+        if(number>=10) {
+            System.out.println("Position "+number+": "+"No such index!");
+        }
+        else {
+            System.out.println("Position "+number+": "+array[number]);
+               }
+          }
+    
+    }
+}
