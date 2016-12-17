@@ -1,0 +1,32 @@
+// Lab161-5a
+// Input Text
+// Write a Java program that creates a String variable from user input and replaces every instance of a lowercase 'a' with '#' 
+// if 'a' appears 3 times or less. Otherwise replace 'a' with a '@'. Then print this new String to the screen. 
+
+import java.util.Scanner;
+public class replace {
+public static void main(String[]args) {
+	Scanner sen = new Scanner(System.in);
+	String sen1 = sen.nextLine();
+	int i = sen1.length()-1;
+	int c=0;
+
+	while(i>=0) {
+	if(sen1.charAt(i)=='a') {
+	c++;
+	}
+	i--;
+	}
+
+	if(c>=3) {
+	sen1 = sen1.replace('a','@');
+		System.out.println(sen1);
+	}
+  
+	else {
+		sen1 = sen1.replace('a','#');
+		System.out.println(sen1);
+    	}
+      
+   }
+}
