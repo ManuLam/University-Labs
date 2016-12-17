@@ -1,0 +1,26 @@
+// Lab-4a
+// Write a Java program that determines the sum of the units, tens, hundreds and thousands in every four-digit numberm, For example...
+// for the first two numbers, that is 1000 and 1001, the program should add 0 + 1, 0 + 0, 0 + 0, 1+ 1, the output should then print:
+// The sum of the units is 1
+// The sum of the tens is 0
+// The sum of the hundreds is 0
+// The sum of the thousands is 2
+
+public class Revision {
+public static void main(String[]args) {
+    int units=0 , tens=0 , hundreds=0 , thousands=0;
+    
+    for(int i=1000; i<10000; i++) {
+    int d4=i%10 , d3=i/10%10 , d2=i/10/10%10 , d1=i/10/10/10%10;
+    
+    units=units+d4;
+    tens=tens+d3;
+    hundreds=hundreds+d2;
+    thousands=thousands+d1; }
+    
+    System.out.println("The sum of the units is "+units);
+    System.out.println("The sum of the tens is "+tens);
+    System.out.println("The sum of the hundreds is "+hundreds);
+    System.out.println("The sum of the thousands is "+thousands);
+  }
+}
