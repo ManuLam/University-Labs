@@ -1,0 +1,22 @@
+// Lab-4d 
+// Palindrome Checker
+// Write a Java program that will determine if a String, called text, is a palindrome. 
+// A String is a palindrome if the word remains the same when spelled in reverse,For example: 
+// NAVAN is a palindrome 
+// CAVAN is NOT a palindrome
+
+public class Palindrome {
+public static void main(String[]args) {
+    String sen=new String("NAVAN");
+    sen=sen.toUpperCase();
+    int n=sen.length()-1;
+    int m=0 , o=0;
+    
+    do {if(sen.charAt(m)!=sen.charAt(n)) {o++;}
+        m++; n--; }
+    while(n>=0);
+    
+    if(o==0) System.out.println(sen+" is a palindrome");
+    else System.out.println(sen+" is NOT a palindrome");
+    }
+}
