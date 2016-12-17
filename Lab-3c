@@ -1,0 +1,18 @@
+// Lab-3c
+//Write a Java program that uses a while-loop to check how many times an integer num1 can be divided by 2 before the number 
+//becomes less than 2. The program should then print to the screen the number of times num1 can be successively divided by 2.
+//Set num1 to the default 40 when evaluating.
+
+public class While {
+public static void main(String[]args) {
+    
+    int num1=40;
+    int f=1;
+    
+    while(num1>2) {
+        num1=num1/2;
+        f++;
+        }
+    System.out.println(f);
+    }
+}
