@@ -1,0 +1,23 @@
+// Lab161-7a
+// BinaryToDecimal
+// Write a Java program that converts a binary number to a decimal number and prints the decimal number to the screen. 
+// The binary number should be entered by the user at  the keyboard input.
+
+import java.util.Scanner;
+public class binToDec {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int number = input.nextInt();
+    int power = 0;
+    int result = 0;
+    
+    while(number>0) {
+        result += ((number%2)*(int)(Math.pow(2,power)));
+        power++;
+        number /= 10;
+    }
+    
+    System.out.println(result);
+    
+    }
+}
