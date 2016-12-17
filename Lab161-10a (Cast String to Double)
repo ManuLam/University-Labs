@@ -1,0 +1,36 @@
+// Lab161-10a
+// Cast String to Double
+// Casts user inputted Strings to doubles. These Strings represent the hourly rate of pay for employees.
+// Store all the values in a double array (of size 5). 
+// from this double array print to the screen the largest rate of hourly pay and the lowest rate of hourly pay in the 
+// format shown in the sample output below.
+// Largest: 14.41
+// Lowest: 12.11
+
+import java.util.Scanner;
+public class Casting1 {
+public static void main(String[]args) {
+	Scanner input = new Scanner(System.in);
+	double[][] array = new double[1][5];
+
+	for(int i=0; i<=4; i++) {
+		String sen = input.nextLine();
+		sen = sen.substring(0,5);
+		array[0][i] = Double.parseDouble(sen);
+     }
+	
+	double largest = 0 , lowest = array[0][0];
+	for(int i=0; i<=4; i++) {
+		if(largest<array[0][i]) {
+			largest = array[0][i];
+		    }
+		if(lowest>array[0][i]) {
+			lowest = array[0][i];
+    		}
+	  }
+    
+	System.out.println("Largest: "+largest);
+	System.out.println("Lowest: "+lowest);
+  
+	}
+}
