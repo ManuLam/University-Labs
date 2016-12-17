@@ -1,5 +1,5 @@
 // Lab161-9d
-// Largest Row
+// Find Largest Row
 // Write a Java program that will: 
 // Create a square integer 2D array of a size that is decided by user input.
 // Allow the user to fill the array with integers of their choice.
