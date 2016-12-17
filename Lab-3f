@@ -1,0 +1,24 @@
+// Lab-3f
+// Write a Java program that uses a do-while loop to determine if a positive integer number (called num) is a prime number.
+// A number is prime if it is divisible only by 1 and itself. For example, 13 is prime but 12 is not (divisible by 1, 2, 3, 4, 6 and 12).
+
+public class DoWhile {
+public static void main(String[]args) {
+    int num=12;
+    int num1=1;
+    final int number=num;
+    int f=0;
+    
+    do {
+        if(number%num1==0) {
+            f++; }
+            num1++;
+    }
+    while(num>num1);
+    
+    if(f==1)
+    System.out.println(num+" is a prime number");
+    else {System.out.println(num+" is NOT a prime number");
+        }
+    }
+}
