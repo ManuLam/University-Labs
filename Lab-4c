@@ -1,0 +1,21 @@
+// Lab-4c
+// Write a Java program that will print out the contents of a string in reverse order with each word being put on a line of its own. 
+// For example, the string "My name is Aisling" should be printed as follows: 
+// gnilsiA
+// si
+// eman
+// yM
+// Use the String "There are no strings attached" for evaluation.
+
+public class Strings3 {
+public static void main(String[]args) {
+    String sen=new String("There are no strings attached");
+    int n=sen.length()-1;
+    
+    while(n>=0) {
+        char m=sen.charAt(n);
+        if(sen.charAt(n)==' ') {System.out.println(m); }
+        else{System.out.print(m); }
+        n--; }
+    }
+}
