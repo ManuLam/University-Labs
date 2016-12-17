@@ -1,0 +1,38 @@
+// Lab161-5e
+// Simple Calculator
+
+import java.util.Scanner;
+public class calculator {
+public static void main(String[]args) {
+	int q = 0;
+	Scanner input = new Scanner(System.in);
+
+	while(q<1) {
+	System.out.println("Enter two numbers(Decimals) with a character of + or - or / or X or % or Q TO EXIT");
+
+	String num1 = input.next();
+	double num1a = Double.parseDouble(num1);
+	String character0 = input.next().toUpperCase();
+	char character = character0.charAt(0);
+	String num2 = input.next();
+	double num2a = Double.parseDouble(num2);
+
+	switch(character) {
+	case '+':	System.out.println("= "+(num1a+num2a));	break;
+
+	case '-':	System.out.println("= "+(num1a-num2a));	break;
+
+	case '/':	System.out.println("= "+(num1a/num2a));	break;
+
+	case 'X':	System.out.println("= "+(num1a*num2a));	break;
+
+	case '%': 	System.out.println("= "+(num1a%num2a));	break;
+
+	case 'Q': q++; break;
+
+	default: 	System.out.println("Enter a valid character");	break;
+  	}
+}
+   
+   }
+}
