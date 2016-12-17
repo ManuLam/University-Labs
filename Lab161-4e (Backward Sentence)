@@ -1,0 +1,42 @@
+// Lab161-4e
+// Backward Sentence
+// Write a Java program that takes a String, called sentence that references a lowercase String. The program should then 
+// capitalize the first letter of each word in the String, and print the String in reverse by word. For example, 
+// the string "pay no attention to that man behind the curtain" should be printed as follows:
+// Curtain
+// The
+// Behind
+// Man
+// That
+// To
+// Attention
+// No
+// Pay
+
+public class Backwards {
+public static void main(String[]args) {
+    String sentence=new String("pay no attention to that man behind the curtain");
+    int k=0;
+    int u=sentence.length()-1;
+    int e=sentence.length()-1;
+    int w=0;
+    
+   while(k<=u) {
+     char n=sentence.charAt(u);
+     w++;
+      if(n==' ') {
+    String s1=sentence.substring(u+1,u+2).toUpperCase();
+     String f=sentence.substring(u+2,u+w);
+     w=0;
+     System.out.println(s1+f);
+      }
+      else if(u==0) {
+     String q=sentence.substring(u+1,u+w);
+     w=0;
+    String s2=sentence.toUpperCase().substring(u,1);
+     System.out.println(s2+q);
+      }
+        u--;
+        }
+    }
+}
