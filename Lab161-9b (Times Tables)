@@ -1,0 +1,16 @@
+// Lab161-9b
+// Times Tables
+// Write a Java program that will print out the times tables for all numbers between 1 and 12. 
+// Your tables should have rows of 5 asterisks, with a space in between, to separate them. 
+
+public class NestedLoops{
+public static void main(String[] args) {
+        for(int x=1; x<=12; x++) {
+            for(int y=0; y<=12; y++) {
+               System.out.println(x+" * "+y+" = "+x*y);
+            }
+            System.out.println("* * * * *");
+        }
+        
+    }
+}
