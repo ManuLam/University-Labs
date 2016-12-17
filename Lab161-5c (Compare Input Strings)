@@ -1,0 +1,31 @@
+// Lab161-5c
+// Compare Input Strings
+// Write a Java program that compares two Strings. The two Strings should be decided by user input.
+// Firstly:
+// If the two Strings are exactly the same print to the screen "Exactly the same: True" otherwise print "Exactly the same: False". You may use boolean variables.
+// Secondly:
+// If and only if the first comparison was false, a comparison should be done that ignores case sensitivity. If they are the same while ignoring the case print to the screen "Similar: True" otherwise print "Similar: False".
+
+import java.util.Scanner;
+public class wordcompare {
+public static void main(String[]args) {
+	Scanner input = new Scanner(System.in);
+	String sen1 = input.nextLine();
+	String sen2 = input.nextLine();
+
+	if(sen1.equals(sen2)) {
+		System.out.println("Exactly the same: True");
+    	}
+	
+	else if(sen1.equalsIgnoreCase(sen2)) {
+	System.out.println("Exactly the same: False");
+	System.out.println("Similar: True");
+		}
+	
+	else {
+		System.out.println("Exactly the same: False");
+		System.out.println("Similar: False");
+    	}
+
+   }
+}
