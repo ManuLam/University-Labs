@@ -1,4 +1,4 @@
-// Lab161-8f
+// Lab161-8e
 // Add Elements
 // Write a Java program so that the user has to input ten decimal point numbers into an array. 
 // The program should add every number entered to the previous number entered and print the calculation to the screen to 2 decimal places. 
