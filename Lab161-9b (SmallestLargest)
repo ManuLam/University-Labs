@@ -1,0 +1,51 @@
+// Lab161-9b
+// SmallestLargest
+// Write a java program where the largest number in an array gets swapped with the last element in an array, 
+// and the smallest element in an array gets swapped with the first element in the array. The array's size will be decided 
+// by user input and then filled with random numbers between 0 - 100. Print to the screen the array after the swaps, see sample output.
+// 2 6 8 4 13
+
+import java.util.Scanner;
+import java.util.Random;
+public class SmallestLargest {
+public static void main(String[]args) {
+	Scanner input = new Scanner(System.in);
+	Random randomGen = new Random();
+	int size = input.nextInt();
+	int[] array = new int[size];
+	int total = 0 , location = 0;
+
+		for(int k=0; k<size; k++) {
+			int storeRan = randomGen.nextInt(100);
+			array[k] = storeRan;
+		}
+
+		for(int m=0; m<size; m++) {
+			if(total<array[m]) {
+				total = array[m];
+				location = m;
+		}
+	}
+
+		int  total1 = array[0] , location1 = 0;
+		for(int m=0; m<size; m++) {
+			if(total1>array[m]) {
+				total1 = array[m];
+				location1 = m;
+		}
+	}
+
+	final int i = array[size-1];
+	array[size-1] = total;
+	array[location] = i;
+
+	final int j = array[0];
+	array[0] = total1;
+	array[location1] = j;
+
+	for(int p=0; p<size; p++) {
+		System.out.print(array[p]+" ");
+	      }
+    
+    }
+}
