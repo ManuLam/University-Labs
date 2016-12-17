@@ -1,0 +1,40 @@
+// Lab161-8a
+// Array Swap
+// Write a Java program that creates an integer array of size 5. The value of each position should be filled with user input. 
+// This array should be printed to the screen. You should then swap the first and last elements in the array and print it to 
+// the screen on a new line. See sample output for format.
+// 11 2 6 9 3
+// 3 2 6 9 11
+
+import java.util.Scanner;
+public class arraySwap {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int[] array = new int[5];
+    int k=0 , m = 0 , l = 0;
+    
+    while(m<5) {
+        array[m] = input.nextInt();
+        m++;
+    }
+    
+    while(l<5) {
+        System.out.print(array[l]+" ");
+        l++;
+    }
+    
+    System.out.println();
+    
+    final int i = array[0]; 
+    final int j = array[array.length-1];
+    
+    array[0] = j;
+    array[array.length-1] = i;
+    
+    while(k<5) {
+        System.out.print(array[k]+" ");
+        k++;
+        }
+     
+    }
+}
