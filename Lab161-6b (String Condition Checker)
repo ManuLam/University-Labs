@@ -1,0 +1,33 @@
+// Lab161-6b
+// String Condition Checker
+// Write a Java program that checks if a user inputted String starts with a 'T' and ends with a 'd'.
+// If the String starts and ends with a 'T' and 'd' respectively then print to the screen: 
+// "This String starts with T and ends with d"
+// If the String starts with a 'T' and doesn't end with 'd' then print to the screen:
+// "This String starts with T"
+// If the String doesn't start with a 'T' but ends with 'd' then print to the screen:
+// "This String ends with d"
+// Otherwise print to the screen: "This String DOES NOT start with T or end with d"
+
+import java.util.Scanner;
+    
+public class StringChecker {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in); 
+    String sen= input.nextLine();
+    
+    if(sen.charAt(0)=='T' && sen.charAt(sen.length()-1)=='d') {
+        System.out.println("This String starts with T and ends with d");
+    }
+    else if(sen.charAt(sen.length()-1)=='d') {
+        System.out.println("This String ends with d");
+    }
+     else if(sen.charAt(0)=='T') {
+        System.out.println("This String starts with T");
+    }
+    else { System.out.println("This String DOES NOT start with T or end with d");
+    }
+    
+    }
+}
+    
