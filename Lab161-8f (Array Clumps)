@@ -1,0 +1,41 @@
+// Lab161-8f
+// Array Clumps
+// Write a java program where printed to the screen is the biggest "clump" that appears in an array. Lets say that a "clump" in an array is 
+// a series of 2 or more adjacent elements of the same value. 
+// The size of the array is decided by user input and the elements are also decided by user input.
+// [1, 2, 2, 3, 4, 4] → 2                    (Biggest Clump Size: 2)
+// [1, 1, 2, 1, 1] → 2                       (Biggest Clump Size: 2)
+// [1, 1, 1, 1, 1] → 1                       (Biggest Clump Size: 5)
+// [3, 3, 3, 1, 1, 2, 4, 4, 4] → 3           (Biggest Clump Size: 3)
+
+import java.util.Scanner;
+public class Clumps {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int size = input.nextInt();
+    int[] array = new int[size];
+    int count = 1 , total = 0;
+    
+    for(int i=0; i<size; i++) {
+        array[i] = input.nextInt();
+    }
+    
+    for(int i=0; i<size-1; i++) {
+    for(int j=i+1; j<size-1; j++) {
+    if(array[i]==array[j]) {
+        count++;
+        }
+    else {
+        if(count>total) {
+            total = count;
+         }
+         break;
+             }
+       }
+      count=1;
+   }
+    
+    System.out.println("Biggest Clump Size: "+total);   
+    
+    }
+}
