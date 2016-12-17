@@ -1,4 +1,4 @@
-// Lab-3a
+// Lab161-3a
 // Write a Java program that uses a while loop to find the factorial of a number.
 
 import java.util.Scanner;
