@@ -1,0 +1,27 @@
+// Lab161-9a
+// NestedWhileLoop
+// Write a Java program that uses a nested while-loop to print to the screen the following pattern: 
+// #
+// ##
+// ###
+// ####
+// #####
+
+public class NestedLoops{
+public static void main(String[] args) {
+        int NoOfStars = 5;
+        int row = 0;
+        int columns = 0;
+        
+        while(row<NoOfStars) {
+            while(columns<=row) {
+                System.out.print("#");
+                columns++;
+            }
+            columns = 0;
+            System.out.println();
+            row++;
+            }
+            
+     }
+}
