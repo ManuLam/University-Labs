@@ -1,0 +1,22 @@
+// Lab-3g
+// Write a Java program that determines and prints the digits that make up every three-digit number that is divisible by 47. For example...
+// The first digit in the number 100 is 1.
+// The second digit in the number 100 is 0.
+// The third digit in the number 100 is 0.
+
+public class Mod {
+public static void main(String[]args) {
+    
+    int num= 101;
+    int i = 1000;
+        
+        while(num<i) {
+            num++;
+        if(num%47==0) { System.out.println("The first digit in the number "+num+" is "+num/10/10%10);
+                        System.out.println("The second digit in the number "+num+" is "+num/10%10);
+                        System.out.println("The third digit in the number "+num+" is "+num%10); 
+                        System.out.println("**********"); }
+        }
+        
+    }
+}
