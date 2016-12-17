@@ -1,0 +1,37 @@
+// Lab161-5d
+// Capital the first Letter
+// Write a Java program that takes a String and ensures that it only contains lower case letters. 
+// The program should then capitalise the first letter of each word in the String. 
+// For example: my name is aisling > My Name Is Aisling
+
+import java.util.Scanner;
+public class capital {
+public static void main(String[]args) {
+Scanner sen= new Scanner(System.in);
+	String sentence = sen.nextLine();
+	int e = sentence.length()-1;
+	int c =0;
+	int u =0;
+
+	while(e>=0) {
+		int n =sentence.charAt(u);
+		c++;
+		if(n==' ') {
+		String s1 = sentence.substring(u-c+1,u-c+2).toUpperCase();
+		String s2 =	sentence.substring(u-c+2,u);
+			System.out.print(s1+s2);
+			System.out.print(" ");
+			c=0;
+		}
+		else if(e==0) {
+		String	e1 = sentence.substring(u-c+1,u-c+2).toUpperCase();
+		String	e2 = sentence.substring(u-c+2,u+1);
+			System.out.print(e1+e2);
+			c=0;
+		}
+		u++;
+		e--;
+	}
+  
+   }
+}
