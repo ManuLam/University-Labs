@@ -1,0 +1,83 @@
+// Lab171-7d
+// Binary Addition with Carry Method
+// Write a Java program that performs binary addition on two binary numbers. 
+// Use keyboard input to provide the value for the 2 binary numbers.
+
+import java.util.Scanner;
+public class binAddition {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    String num1 = input.nextLine();
+    String num2 = input.nextLine();
+    String num3 = "";
+    String num4 = "";
+    String r  = "";
+    String apart1 = "";
+    String apart2 = "";
+    int p = (num1.length()-1>=num2.length()-1) ? num1.length()-1 : num2.length()-1;
+
+    if(num1.length()-1 > num2.length()-1) {                 //if First number is bigger than Second number
+    int f = (num1.length()-1) - (num2.length()-1);
+    while(f>0){                                            // Add zeros infront of smaller
+    apart1 += "0";
+    f--;
+        }
+    num3 = num1;
+    num4 = apart1 + num2;
+    }
+
+    if((num2.length()-1) > (num1.length()-1)) {             //if Second number is bigger than First number
+    int w = (num2.length()-1) - (num1.length()-1);
+    while(w>0){                                            // Add zeros infront of smaller
+    apart2 += "0";
+    w--;
+        }
+    num3 = apart2 + num1;
+    num4 = num2;
+    }
+
+    if(num1.length() == num2.length()) {
+        num3 = num1;
+        num4 = num2;
+    }
+	int j=num3.length()-1;
+    int carry=0;
+    while(j>0) {                          						    // getting characters into number from end towards 1
+    char a = num3.charAt(j);
+    char b = num4.charAt(j);
+    int val1 = Character.getNumericValue(a);
+    int val2 = Character.getNumericValue(b);
+    int res = val1 + val2 + carry;
+    carry=0;
+
+    switch(res) {
+    case 0: r += "0"; carry=0; break;                                // making the new Binary String!
+    case 1: r += "1"; carry=0; break;
+    case 2: r += "0"; carry=1; break;
+    case 3: r += "1"; carry=1; break;
+    }
+    j--;
+    }
+
+    int val3 = Character.getNumericValue(num3.charAt(0));			// getting the first digit and seeing if it is 1 , 01 or 11
+    int val4 = Character.getNumericValue(num4.charAt(0));
+    int res1 = val3 + val4 + carry;
+    switch(res1) {
+    case 1: r += "1"; break;
+    case 2: r += "01"; break;
+    case 3: r += "11"; break;
+        }
+
+    int len = r.length()-1;
+    String r1 = "";
+
+    while(len>=0) {                                         //Reverse the Binary String
+        char m = r.charAt(len);
+        r1 += Character.toString(m);
+        len--;
+    }
+    
+    System.out.println(r1);
+    
+    }
+}
