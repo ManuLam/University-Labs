@@ -1,0 +1,24 @@
+// Lab161-6a
+// Multiple of 5 or/and 7
+// Write a Java program that uses a while-loop to check for all numbers between 0 and 500 that are: 
+// (a): a multiple of 5 and 7 
+// (b): a multiple of 5 or 7 
+
+public class While {
+public static void main(String[]args) {
+    int i =1;
+    
+    System.out.println("0"+" is a multiple of 5 and 7");
+    
+    while(i<=500) {
+        if(i%5==0 && i%7 ==0) {
+            System.out.println(i+" is a multiple of 5 and 7");
+        }
+        else if(i%5==0 || i%7==0) {
+            System.out.println(i+" is a multiple of 5 or 7");
+        }
+        i++;
+     }
+     
+    }
+}
