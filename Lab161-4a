@@ -1,4 +1,4 @@
-// Lab-4a
+// Lab161-4a
 // Write a Java program that determines the sum of the units, tens, hundreds and thousands in every four-digit numberm, For example...
 // for the first two numbers, that is 1000 and 1001, the program should add 0 + 1, 0 + 0, 0 + 0, 1+ 1, the output should then print:
 // The sum of the units is 1
