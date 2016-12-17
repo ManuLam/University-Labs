@@ -1,0 +1,34 @@
+// Lab161-7b
+// DecimalToBinary
+// Write a Java program that converts a decimal number to a binary number and prints the binary number to the screen. 
+// Keyboard input should provide the value for the decimal number.
+
+import java.util.Scanner;
+public class decToBin {
+public static void main(String[]args) {
+    Scanner input = new Scanner(System.in);
+    int number = input.nextInt();
+    String sen = "";
+    
+    while(number>=1) {
+        if(number%2==0) {
+            number /= 2;
+            sen += "0";
+          }
+        else if(number%2==1) {
+            number = (number-1)/2;
+            sen += "1";
+          }
+    }
+    
+    int l = sen.length()-1;
+    String sen1 = "";
+    
+    while(l>=0) {
+        char a = sen.charAt(l);
+        System.out.print(a);
+        l--;
+       }
+    
+    }
+}
