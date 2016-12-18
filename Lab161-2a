@@ -1,0 +1,28 @@
+// Lab161-2a
+// Write a java class within Question4.java. In it's main method:
+// Declare integers, called num1 and num2, and set their values to the values 10 and 5 respectively.
+// Declare integers called result1 and result2  and set each to a default value of 0.
+// Declare a double called result3 and set it to the value 0.0 .
+// Add num1 and num2 and store the result in result1.
+// Multiply num1 by num2 and store the result in result2.
+// Divide num1 by num2 and store the result in result3.
+// Print the variables result1,result2 and result3 to the screen, each on a new line with the message seen in the sample output below.
+
+public class Question1 {
+public static void main(String[]args) {
+    int num1 = 10;
+    int num2 = 5;
+    int result1 = 0 ;
+    int result2 = 0;
+    double result3 = 0.0;
+    
+    result1 = num1+num2;
+    result2 = num1*num2;
+    result3 = num1/num2;
+    
+    System.out.println("Addition: "+result1);
+    System.out.println("Multiplication: "+result2);
+    System.out.println("Division: "+result3);
+    
+    }
+}
