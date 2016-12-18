@@ -1,0 +1,10 @@
+// Lab161-1a
+// Write a java program which prints the message "Welcome to VPL" exactly to the screen.
+
+public class Printing {
+public static void main(String[]args) {
+    
+        System.out.println("Welcome to VPL");
+        
+    }
+}
