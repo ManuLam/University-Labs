@@ -1,0 +1,22 @@
+// Lab161-2c
+// Write a java program that uses if selection statements to print out the cost of a toll based on the type of vehicle. 
+// Declare a character variable called vehicle. Your program should check the value of the character variable vehicle to see 
+// if it represents a car, a motorbike, a bus, a truck or a van. Depending on the type of vehicle it should print out 
+// the appropriate toll price. 
+// Vehicle representation is as follows: 'c' represents a car, 'm' represents a motorbike, 'b' represents a bus, 't' represents a 
+// truck and 'v' represents a van. 
+// The prices are as follows: Car - 2.00, Motorbike - 1.10, Bus - 4.25, Truck - 6.70 and Van - 4.00.
+
+public class Selection2 {
+public static void main(String[]args) {
+    char car='c', motorbike='m' , bus='b' , truck='t' , van='v';
+    char vehicle = 'c';
+    
+    if(vehicle==car) System.out.println("Car - 2.00");
+    else if(vehicle==motorbike) System.out.println("Motorbike - 1.10");
+    else if(vehicle==bus) System.out.println("Bus - 4.25");
+    else if(vehicle==truck) System.out.println("Truck - 6.70");
+    else System.out.println("Van - 4.00");
+    
+    }
+}
