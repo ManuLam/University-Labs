@@ -1,0 +1,16 @@
+// Lab161-1c
+// What do the following statements print?
+// System.out.println("3 + 4");
+// System.out.println(3 + 4);
+// System.out.println(3 + "4");
+// Write a java program that contains all of the statements above to find out.
+
+public class Printing3 {
+public static void main(String[]args) {
+    
+        System.out.println("3+4");
+        System.out.println(3 + 4);
+        System.out.println(3+"4");
+        
+    }
+}
