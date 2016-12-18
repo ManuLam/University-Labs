@@ -1,0 +1,17 @@
+// Lab161-2f
+// Write a Java program that prints out the fee to use a golf course depending on whether the user is a member or not. 
+// If the user is a member the fee is 5 and if not the fee is 20. 
+// You must use the ternary operator. 
+// A variable of type char called member should have the value 'Y' or 'N' which decides if the user is a member or not.
+// An integer called fee holds the the fee given from the ternary operator. Evaluate with member = 'N'.
+
+public class Ternary {
+public static void main(String[]args) {
+    int fee = 0;
+    char member='y';
+   
+    fee = ('y'==member) ? 20:5;
+    System.out.print("The fee is: "+fee);
+    
+    }
+}
