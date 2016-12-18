@@ -1,0 +1,36 @@
+// Lab161-2g
+// Write a Java program that declares 5 integer variables with the values below.
+// The program determines how many of the numbers are odd or and how many are even. 
+// If two are odd and three are even it would print:
+// Odd: 2
+// Even: 3 
+// Use these variable names and values when evaluating:
+// Variable	Value
+// int num1	18
+// int num2	27
+// int num3	33
+// int num4	20
+// int num5	3
+
+public class Modulus {
+public static void main(String[]args) {
+    int num1 = 18;
+    int num2 = 27;
+    int num3 = 33;
+    int num4 = 20;
+    int num5 = 3;
+    int even = 0;
+    int odd = 0;
+    int y= 0;
+    
+    y= (num1%2==0) ? even++ : odd++;
+    y= (num2%2==0) ? even++ : odd++;
+    y= (num3%2==0) ? even++ : odd++;
+    y= (num4%2==0) ? even++ : odd++;
+    y= (num5%2==0) ? even++ : odd++;
+    
+    System.out.println("Odd: "+odd);
+    System.out.println("Even: "+even);
+    
+    }
+}
