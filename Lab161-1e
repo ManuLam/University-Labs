@@ -1,0 +1,19 @@
+// Lab161-1e
+// Write a Java program that uses an int num that stores a 3 digit number. Your program should then break up this number
+// using the modulos operator into its component digits and print the message exactly as given below. Make sure to test your
+// program with another 3 digit number! 
+
+public class UsingMod {
+public static void main(String[]args) {
+        int num=123;
+        int result1=num%10;
+        int result2=num/10%10;
+        int result3=num/10/10%10;
+        
+        System.out.println("The digits in the number "+num+" are:");
+        System.out.println(result3);
+        System.out.println(result2);
+        System.out.println(result1);
+        
+    }
+}
