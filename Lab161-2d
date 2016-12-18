@@ -1,0 +1,27 @@
+// Lab161-2d
+// Write a Java program that uses a switch statement to print out the month of the year given a value between 1 and 12, 
+// which is stored in an integer variable called month. For example, the value 1 would result in January being printed. 
+// If an integer that isn't a month is encountered it should output "Not a month".  Set month equal to 9 for evaluation.
+
+public class Switch {
+    public static void main(String[]args) {
+        int month = 9;
+        
+        switch(month) {
+            case 1: System.out.println("January"); break;
+            case 2: System.out.println("February"); break;
+            case 3: System.out.println("March"); break;
+            case 4: System.out.println("April"); break;
+            case 5: System.out.println("May"); break;
+            case 6: System.out.println("June"); break;
+            case 7: System.out.println("July"); break;
+            case 8: System.out.println("August"); break;
+            case 9: System.out.println("September"); break;
+            case 10: System.out.println("October"); break;
+            case 11: System.out.println("November"); break;
+            case 12: System.out.println("December"); break;
+            default: System.out.println("Not a month");
+        }
+        
+    }
+}
