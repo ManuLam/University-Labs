@@ -1,0 +1,10 @@
+// Lab161-1b
+// Write a java program which prints the message "Hello" on one line and "world!" on the next.
+
+public class Printing2 {
+public static void main(String[]args) {
+    
+        System.out.println("Hello\nworld!");
+        
+    }
+}
