@@ -1,0 +1,14 @@
+// Lab161-2b
+// Write a Java program that checks to see if the age of a person is greater than or equal to 18. 
+// If it is, print out that the person can vote; otherwise, print that they cannot vote.
+// Use an integer variable age to represent the age of the person.
+
+public class Selection {
+public static void main(String[]args) {
+    int age =18;
+    
+    if (age>= 18) System.out.println("Person can vote.");
+    else System.out.println("Person cannot vote.");
+    
+    }
+}
