@@ -1,0 +1,20 @@
+// Lab161-1d
+// Write a Java program that:
+// Declares an integer, called num1, and sets its value to be 5.
+// Declares a double, called num2, and sets its value to be 2.3.
+// Declares a character variable, called letter, and sets its value to be 's'.
+// Prints each initialised variable on a new line. 
+// You must not use print statements to print out the 5, 2.3 or s, but use them to print out the variables using their names.
+
+public class PrintingVariables {
+public static void main(String[]args) {
+        int num1=5;
+        double num2=2.3;
+        char letter='s';
+        
+        System.out.println(num1);
+        System.out.println(num2);
+        System.out.println(letter);
+        
+    }
+}
