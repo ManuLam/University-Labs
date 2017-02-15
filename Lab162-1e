@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Minimum {
+public static void main(String[]args) {
+	Scanner input = new Scanner(System.in);
+	int n = input.nextInt();
+
+	if(checkMin(n)==true) {
+		System.out.println("Good");
+	}
+	else {
+	System.out.println("Bad");
+	}
+		}
+
+	public static boolean checkMin(int n) {
+		if(n>=16) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
