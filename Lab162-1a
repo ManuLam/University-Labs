@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class weatherReport {
+public static void main (String[]args) {
+	Scanner in = new Scanner(System.in);
+	int n = in.nextInt();
+	printWeatherReport(n);
+
+		}
+
+	public static void printWeatherReport(int n) {
+		if(0<=n && n<=8) {
+			System.out.println("It is cold outside, bring a jacket!");
+		}
+		else if(9<=n && n<=16) {
+			System.out.println("The sun is coming out, and it is getting warmer");
+		}
+		else if(17<=n && n<=32) {
+			System.out.println("Time to sit beside the pool and relax");
+		}
+		else if(33<=n && n<=45) {
+			System.out.println("Too hot!, can't move!");
+		}
+		else {
+			System.out.println("Not a valid number!");
+		}
+
+	}
+}
