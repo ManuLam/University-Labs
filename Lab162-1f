@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class reverseString {
+public static void main(String[]args) {
+	Scanner input = new Scanner(System.in);
+	String sen = input.nextLine();
+
+	reverseString(sen);
+		}
+
+	public static void reverseString(String sen) {
+		int n = sen.length()-1;
+
+		for(int i=n; i>=0; i--) {
+			System.out.print(sen.charAt(i));
+		}
+	}
+}
