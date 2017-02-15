@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class doubleSize {
+public static void main(String[]args) {
+	Scanner in = new Scanner(System.in);
+	int a = in.nextInt();
+	int b = in.nextInt();
+	determineSize(a,b);
+
+	}
+
+	public static void determineSize(double a, double b) {
+
+	if(a>b) {
+		System.out.println(a+" is bigger than "+b);
+	}
+	else if(a<b) {
+		System.out.println(b+" is bigger than "+a);
+	}
+	else {
+		System.out.println(b+" is same value as "+a);
+	  }
+	}
+
+}
