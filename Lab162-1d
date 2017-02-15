@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class oddEven {
+public static void main(String[]args) {
+	Scanner in = new Scanner(System.in);
+	int n = in.nextInt();
+
+	if(isEven(n)==true && n>0)	{
+		System.out.println(n+" is a even number");
+	}
+	else if(isEven(n)==false && n>0) {
+		System.out.println(n+" is a odd number");
+	}
+	else {
+		System.out.println("Not a valid number");
+	}
+
+	}
+
+	public static boolean isEven(int n) {
+		if(n%2==0) {
+			return true;
+			}
+		else {
+			return false;
+			}
+		}
+
+}
