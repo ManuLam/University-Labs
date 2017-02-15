@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class primeNumbers {
+public static void main(String[]args) {
+	Scanner input = new Scanner(System.in);
+	int n = input.nextInt();
+	if(checkPrime(n)==true) {
+		System.out.println(n+" is a Prime number");
+	}
+	else {
+		System.out.println(n+" is not a Prime number");
+	}
+    	}
+
+    public static boolean checkPrime(int n) {
+    	boolean isPrime = true;				// Sieve of Eratosthenes
+    	double a = Math.sqrt((double)n);	// by rooting the number to solve for the divisibles by it proves Prime or not
+
+    	for(int j=2; j<=a; j++) {		// Using the start of 2 heading to the root of the number
+    		if(n%j==0) {				// If the number is divisble by the number going to the root
+    			isPrime = false;		// Then it isn't a Prime number
+    			break;					// Breaks the loop since its proven
+    			}
+    		else {
+    			isPrime = true;			// a prime is proven
+    			}
+    		}
+    	if(isPrime==true) {
+    		return true;
+    	}
+
+    	else {
+    		return false;
+    	}
+
+    }
+}
