@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class LinearSearch {
+public static void main(String[]args) {
+	Scanner in = new Scanner(System.in);
+	int size = in.nextInt();
+	double[] array = new double[size];
+
+	for(int i=0; i<=array.length-1; i++) {
+		array[i] = in.nextDouble();
+		}
+
+	double search = in.nextDouble();
+	if(findElement(array,search)==true) {
+		System.out.println("Found");
+		}
+	else {
+		System.out.println("Not found");
+		}
+
+    }
+
+    public static boolean findElement(double[] array, double search) {
+		boolean t = false;;
+
+    	for(int i=0; i<=array.length-1; i++) {
+    		if(array[i]==search) {
+    			t = true;
+    			break;
+    			}
+    		}
+    	if(t==true) {
+    		return true;
+    		}
+    	else {
+    		return false;
+    		}
+  	  }
+}
