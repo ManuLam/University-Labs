@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class MethodsArrays {
+public static void main(String[]args) {
+    int[] array = fillArray();
+    
+   System.out.println("Sum = "+sumArray(array));
+   System.out.println("Average = "+avgArray(array));  
+   printArray(array);
+    }
+    
+    public static int[] fillArray() {
+        Scanner in = new Scanner(System.in);
+        int size = in.nextInt();
+        int[] array = new int[size];
+        
+        for(int i=0; i<size; i++) {
+            array[i] = in.nextInt();
+            }
+            return array;
+        }
+        
+        public static int sumArray(int[] array) {
+            int sum = 0;
+            
+            for(Integer x : array) {
+                sum += x;
+            }
+            return sum;
+        }
+        
+        public static void printArray(int[] array) {
+            for(Integer x : array) {
+                System.out.printf("%s ",x);
+            }
+        }
+        
+        public static int avgArray(int[] array) {
+            int avg = 0 , n = array.length;
+            
+            for(Integer x : array) {
+                avg += x;
+            }
+            
+            avg /= n;
+            
+            return avg;
+        }
+}
