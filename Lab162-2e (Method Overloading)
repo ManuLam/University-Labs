@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class MethodOverload {
+public static void main(String[]args) {
+    Scanner in = new Scanner(System.in);
+    int n = in.nextInt();
+    String sen = "";
+    for(int i=0; i<n; i++) {
+     sen += in.next();
+     sen += " ";
+     }
+     sen = sen.toLowerCase();
+    int x1 = in.nextInt();
+    int x2 = in.nextInt();
+    String temp1 = in.next();
+    String temp2 = in.next();
+    char c1 = temp1.charAt(0);
+    char c2 = temp2.charAt(0);
+    
+    System.out.println(manipulation(sen));
+    System.out.println(manipulation(sen,c1));
+    System.out.println(manipulation(sen,x1));
+    System.out.println(manipulation(sen,x1,x2));
+    System.out.println(manipulation(sen,c1,c2));
+    System.out.println(manipulation(sen,c1,x1));
+        }
+    //1
+    public static String manipulation(String str) {
+        int n = str.length() , count = 0;
+
+        return str.replace(" ", "");
+    
+    }
+    //2
+    public static String manipulation(String str, char c) {
+        String sen = c + "";
+        
+        return str.replace(sen, "");
+    }
+    //3
+    public static String manipulation(String str, int n) {
+        char c = str.charAt(n);
+        String sen = c + "";
+        
+        return str.replace(sen, "");
+    }
+    //4
+    public static String manipulation(String str, int n, int m) {
+         String sen = "";
+         sen += str.substring(0,n+1);
+         sen += str.substring(m,str.length()-1);
+        
+         return sen;
+    }
+    //5
+    public static String manipulation(String str, char c , char d) {
+    int m = 0;        
+    for(int i=str.length()-1; i>=0; i--) {
+        if(str.charAt(i)==d) {
+            m=i;
+            break;
+        }
+    }
+      String sen = str.substring(str.indexOf(c)+1,m);
+        
+         return str.replace(sen,"");
+    }
+    //6
+    public static String manipulation(String str, char c , int n) {
+        String sen = "";
+        int count = 0 , m = 0;
+        
+        for(int i=0; i<=str.length()-1; i++) {
+            if(str.charAt(i)==c) {
+                count++;
+            }
+            if(count==n) {
+                m=i;
+                break;
+            }
+        }
+            sen += str.substring(0,m);
+        
+        return str.replace(sen,"");
+    }
+}
