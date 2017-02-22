@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class SearchArray {
+public static void main(String[]args) {
+    Scanner in = new Scanner(System.in);
+    int maxSize = in.nextInt();
+    
+    String[][] array = new String[maxSize][maxSize];
+    
+    for(int i=0; i<maxSize; i++) {
+    for(int j=0; j<maxSize; j++) {
+        array[i][j] = in.next();
+         }
+    }
+    
+    String search = in.next();
+    
+    if(countStrings(array,search)>0) {
+        System.out.println(search+" is contained "+countStrings(array,search)+" times in the array");
+     }
+     else {
+        System.out.println(search+" was NOT found in the array");
+     }
+    
+}
+
+    public static int countStrings(String [][] S , String str) {
+        int n = S.length , count = 0;
+        
+        for(int i=0; i<n; i++) {
+        for(int j=0; j<n; j++) {
+            if(str.equalsIgnoreCase(S[i][j])) {
+                count++;
+                 }
+            }
+        }
+        return count;
+    }   
+}
