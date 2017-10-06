@@ -11,8 +11,7 @@ public static void main(String[]args) {
 	System.out.print(a[(a.length)-(in.nextInt())]);
 
     }
-
-
+	
     public static int[] insertion(int[] a) {
     	for(int i = 0; i < a.length; i++) {
     		for(int j = i+1; j < a.length; j++) {
