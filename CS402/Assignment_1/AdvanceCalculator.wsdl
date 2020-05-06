@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="add">
+    <complexType>
+     <sequence>
+      <element name="value_to_add" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addResponse">
+    <complexType>
+     <sequence>
+      <element name="addReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="divide">
+    <complexType>
+     <sequence>
+      <element name="value_to_divide" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="divideResponse">
+    <complexType>
+     <sequence>
+      <element name="divideReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="subtract">
+    <complexType>
+     <sequence>
+      <element name="value_to_subtract" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="subtractResponse">
+    <complexType>
+     <sequence>
+      <element name="subtractReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="multiply">
+    <complexType>
+     <sequence>
+      <element name="value_to_multiply" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="multiplyResponse">
+    <complexType>
+     <sequence>
+      <element name="multiplyReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fraction">
+    <complexType>
+     <sequence>
+      <element name="numerator" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="fractionResponse">
+    <complexType>
+     <sequence>
+      <element name="fractionReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="power">
+    <complexType>
+     <sequence>
+      <element name="power_value" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="powerResponse">
+    <complexType>
+     <sequence>
+      <element name="powerReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="square_root">
+    <complexType/>
+   </element>
+   <element name="square_rootResponse">
+    <complexType>
+     <sequence>
+      <element name="square_rootReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="get_current_value">
+    <complexType/>
+   </element>
+   <element name="get_current_valueResponse">
+    <complexType>
+     <sequence>
+      <element name="get_current_valueReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="resetCalculator">
+    <complexType/>
+   </element>
+   <element name="resetCalculatorResponse">
+    <complexType>
+     <sequence>
+      <element name="resetCalculatorReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="n_root">
+    <complexType>
+     <sequence>
+      <element name="n_root_value" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="n_rootResponse">
+    <complexType>
+     <sequence>
+      <element name="n_rootReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addResponse">
+
+      <wsdl:part element="impl:addResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="multiplyResponse">
+
+      <wsdl:part element="impl:multiplyResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="resetCalculatorRequest">
+
+      <wsdl:part element="impl:resetCalculator" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="subtractResponse">
+
+      <wsdl:part element="impl:subtractResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="fractionResponse">
+
+      <wsdl:part element="impl:fractionResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addRequest">
+
+      <wsdl:part element="impl:add" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="divideResponse">
+
+      <wsdl:part element="impl:divideResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="powerResponse">
+
+      <wsdl:part element="impl:powerResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="n_rootResponse">
+
+      <wsdl:part element="impl:n_rootResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="get_current_valueRequest">
+
+      <wsdl:part element="impl:get_current_value" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="square_rootRequest">
+
+      <wsdl:part element="impl:square_root" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="fractionRequest">
+
+      <wsdl:part element="impl:fraction" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="resetCalculatorResponse">
+
+      <wsdl:part element="impl:resetCalculatorResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="subtractRequest">
+
+      <wsdl:part element="impl:subtract" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="get_current_valueResponse">
+
+      <wsdl:part element="impl:get_current_valueResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="divideRequest">
+
+      <wsdl:part element="impl:divide" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="powerRequest">
+
+      <wsdl:part element="impl:power" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="n_rootRequest">
+
+      <wsdl:part element="impl:n_root" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="multiplyRequest">
+
+      <wsdl:part element="impl:multiply" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="square_rootResponse">
+
+      <wsdl:part element="impl:square_rootResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="AdvanceCalculator">
+
+      <wsdl:operation name="add">
+
+         <wsdl:input message="impl:addRequest" name="addRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addResponse" name="addResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="divide">
+
+         <wsdl:input message="impl:divideRequest" name="divideRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:divideResponse" name="divideResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subtract">
+
+         <wsdl:input message="impl:subtractRequest" name="subtractRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:subtractResponse" name="subtractResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="multiply">
+
+         <wsdl:input message="impl:multiplyRequest" name="multiplyRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:multiplyResponse" name="multiplyResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fraction">
+
+         <wsdl:input message="impl:fractionRequest" name="fractionRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:fractionResponse" name="fractionResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="power">
+
+         <wsdl:input message="impl:powerRequest" name="powerRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:powerResponse" name="powerResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="square_root">
+
+         <wsdl:input message="impl:square_rootRequest" name="square_rootRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:square_rootResponse" name="square_rootResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="get_current_value">
+
+         <wsdl:input message="impl:get_current_valueRequest" name="get_current_valueRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:get_current_valueResponse" name="get_current_valueResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="resetCalculator">
+
+         <wsdl:input message="impl:resetCalculatorRequest" name="resetCalculatorRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:resetCalculatorResponse" name="resetCalculatorResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="n_root">
+
+         <wsdl:input message="impl:n_rootRequest" name="n_rootRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:n_rootResponse" name="n_rootResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AdvanceCalculatorSoapBinding" type="impl:AdvanceCalculator">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="add">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="divide">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="divideRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="divideResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subtract">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="subtractRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="subtractResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="multiply">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="multiplyRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="multiplyResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="fraction">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="fractionRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="fractionResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="power">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="powerRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="powerResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="square_root">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="square_rootRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="square_rootResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="get_current_value">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="get_current_valueRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="get_current_valueResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="resetCalculator">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="resetCalculatorRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="resetCalculatorResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="n_root">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="n_rootRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="n_rootResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AdvanceCalculatorService">
+
+      <wsdl:port binding="impl:AdvanceCalculatorSoapBinding" name="AdvanceCalculator">
+
+         <wsdlsoap:address location="http://localhost:8080/Assignment1/services/AdvanceCalculator"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
