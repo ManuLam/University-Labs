@@ -1,0 +1,7 @@
+Hypothesis A B C : Prop. 
+Lemma q1_1 : A -> B -> (B -> C) -> A -> C.
+intros.
+apply H1.
+apply H0.
+Qed.
+Print q1_1.

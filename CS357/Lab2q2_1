@@ -1,0 +1,8 @@
+Hypothesis P Q R : Prop. 
+Lemma imp_perm : (P -> Q -> R) -> Q -> P -> R.
+intros H H0 p.
+apply H.
+apply p.
+exact H0.
+Qed.
+Print imp_perm.

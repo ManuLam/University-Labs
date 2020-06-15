@@ -1,0 +1,8 @@
+Hypothesis A B C : Prop.
+Lemma transImp : A -> (A -> B) -> (B -> C) -> C.
+intros.
+apply H1.
+apply H0.
+exact H.
+Qed.
+Print transImp.

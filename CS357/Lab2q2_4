@@ -1,0 +1,6 @@
+Hypothesis P Q : Prop. 
+Lemma delta_impR : (P -> Q)-> P -> P -> Q.
+intros H H0.
+exact H.
+Qed.
+Print delta_impR.

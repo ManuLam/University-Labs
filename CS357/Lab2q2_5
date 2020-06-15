@@ -1,0 +1,10 @@
+Hypothesis P Q R S: Prop. 
+Lemma diamond : (P -> Q)-> (P -> R)-> (Q -> R -> S) -> P -> S.
+intros H0 H1 H2 H3.
+apply H2.
+apply H0.
+apply H3.
+apply H1.
+exact H3.
+Qed.
+Print diamond.

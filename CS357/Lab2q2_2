@@ -1,0 +1,7 @@
+Hypothesis P Q R : Prop. 
+Lemma ignore_Q : (P -> R)-> P -> Q -> R.
+intros H H0 p.
+apply H.
+exact H0.
+Qed.
+Print ignore_Q.

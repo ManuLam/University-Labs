@@ -1,0 +1,12 @@
+Hypothesis P Q: Prop. 
+Lemma weak_peirce : ((((P -> Q)-> P) -> P) -> Q) -> Q.
+intros.
+apply H.
+intros.
+apply H0.
+intros.
+apply H.
+intros.
+exact H1.
+Qed.
+Print weak_peirce.
