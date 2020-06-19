@@ -1,0 +1,63 @@
+Hypothesis E F: Prop. 
+Lemma q3_8 : ( ~ (E \/ F))  ->  (~ E /\ ~ F).
+intros.
+split.
+red.
+intros.
+apply H.
+left.
+apply H0.
+red.
+intros.
+apply H.
+right.
+apply H0.
+Qed.
+
+Lemma q3_9 : (~ E /\ ~ F)  ->  (~ (E \/ F)).
+intros.
+red.
+intros.
+elim H.
+intros.
+elim H.
+intros.
+elim H0.
+intros.
+contradiction.
+intros.
+contradiction.
+Qed.
+
+Require Import Classical.
+Lemma q3_10 : (~ (E /\ F))  ->  (~ E \/ ~ F).
+intros.
+elim (classic E).
+elim (classic F).
+intros.
+left.
+red.
+intros.
+apply H.
+split.
+assumption.
+assumption.
+intros.
+right.
+assumption.
+intros.
+left.
+assumption.
+Qed.
+
+Lemma q3_11 : (~ E \/ ~ F)  ->  (~ (E /\ F)).
+intros.
+red.
+intros.
+elim H.
+elim H0.
+contradiction.
+intros.
+elim H0.
+contradiction.
+Qed.

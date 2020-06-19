@@ -1,0 +1,25 @@
+Hypothesis A B: Prop. 
+Lemma q2_5 : ((~A \/ B))  ->  ((A -> B)).
+intros.
+elim H.
+intros.
+contradiction.
+intros.
+exact H1.
+Qed.
+
+Lemma q2_6 : ((A -> B))  ->  ((~B -> ~A)).
+intros.
+red.
+intros.
+apply H0.
+apply H.
+apply H1.
+Qed.
+
+Lemma q2_7 : ~ (A /\ ~A).
+red.
+intros.
+apply H.
+apply H.
+Qed.

@@ -1,0 +1,43 @@
+Hypothesis A B C: Prop. 
+Lemma q1_1 : ((A /\ B) /\ C)  ->  (A /\ (B /\ C)).
+intros.
+elim H.
+split.
+apply H.
+split.
+apply H0.
+exact H1.
+Qed.
+
+Lemma q1_2 : ((A /\ B) -> C)  ->  (A -> (B -> C)).
+intros.
+apply H.
+split.
+apply H0.
+exact H1.
+Qed.
+
+Lemma q1_3 : ((A \/ B) \/ C)  ->  (A \/ (B \/ C)).
+intros.
+elim H.
+intros.
+elim H0.
+intros.
+left.
+apply H1.
+intros.
+right.
+left.
+apply H1.
+intros.
+right.
+right.
+exact H0.
+Qed.
+
+Lemma q1_4 : ((A \/ B) -> C)  ->  (A -> (B -> C)).
+intros.
+apply H.
+left.
+exact H0.
+Qed.
