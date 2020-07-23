@@ -1,0 +1,12 @@
+Machine Learning - CS401
+Student ID - 16458032
+Student Name- Manyiu Lam
+
+The best data fitting accuracy I have achieve is 72% (I did spent 1-2 hours max on this training).
+This was done by using Python3.6 with Tensorflow/Keras.
+
+I built a Keras model using 2 Relu Layers and a single Sigmoid layer.
+This model was then compiled with Adam optimizer and by using binary_crossentropy we can have an accurate loss for binary outputs.
+The model was then fitted with our training data and training labels.
+
+A model was produced, I saved the best model I done (72%) and applied a prediction on the test data. After that I printed the predicted results into a file, not sure if this was done correctly since the outputs were floats between [0,1] and I just rounded them up or down.
