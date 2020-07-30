@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE  parking_day != 'Saturday' and parking_day != 'Sunday';

@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE (parking_hours >= 4) and (num_occupants >= 3);

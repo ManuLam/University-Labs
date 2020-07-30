@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE (car_make = 'Toyota') and (car_model = 'Corolla'); 

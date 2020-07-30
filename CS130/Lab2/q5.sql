@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE car_reg like '%MH%' or car_reg like '%KE%';

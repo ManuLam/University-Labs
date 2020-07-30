@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE (car_reg like '1%1') and (car_make = 'BMW' or car_make = 'Chevrolet');

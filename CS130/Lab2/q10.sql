@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE (car_reg like '%-D-%') and (parking_level != 3);

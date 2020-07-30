@@ -1,0 +1,1 @@
+﻿SELECT * FROM cs130lab2 WHERE ((parking_level = 3) and ( parking_day = 'Tuesday')) or (car_color = 'Green');
