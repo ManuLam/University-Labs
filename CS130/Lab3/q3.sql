@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab3 WHERE booktitle SIMILAR TO '[0-9]*';

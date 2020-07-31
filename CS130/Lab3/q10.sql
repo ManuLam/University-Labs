@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab3 WHERE (custregion SIMILAR TO 'IE|UK') and (bookprice*(1.12) > 60) and (bookpages >= 100);

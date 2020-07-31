@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab3 WHERE custiban ~* '^(IE|CH|ES).*$' and (char_length(custiban) >= 26);

@@ -1,0 +1,1 @@
+﻿SELECT Booktitle FROM  CS130_2017_Lab3 WHERE Bookpages (BETWEEN 100 and 200) and Bookpages%2 == 0;

@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab3 WHERE custiban SIMILAR TO '% [0-9]{3}';
