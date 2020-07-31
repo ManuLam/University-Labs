@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE filesize >= 400 and (date_part('hour', downloadts) IN (2,3,5,7,11,13,17,19,23) and date_part('month', downloadts) IN (2,3,5,7,11) and date_part('day', downloadts) IN (2,3,5,7,11,13,17,19,23,29,31))

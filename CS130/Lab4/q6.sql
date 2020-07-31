@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE filename ~* '^[AEIOU].*[AEIOU].mpeg$'

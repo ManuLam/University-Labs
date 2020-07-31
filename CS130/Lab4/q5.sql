@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE (EXTRACT(DOW FROM downloadts) = 0 and (downloadts BETWEEN '2016-01-01 00:00:00' AND '2016-12-31 23:59:59')) and (user_agent ~* '.*Googlebot/2.1..*')

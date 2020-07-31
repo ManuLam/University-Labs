@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE ((char_length(filename)) % 2 = 0 and (char_length(appname) % 2 = 0)) and filename ~* '.*.mp3$'

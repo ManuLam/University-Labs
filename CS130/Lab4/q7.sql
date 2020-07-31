@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE NOT (filename  ~* '^.*(A|E|I|O|U).*$')

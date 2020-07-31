@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE ( date_part('month', downloadts) + date_part('day', downloadts) + date_part('hour', downloadts) + date_part('minute', downloadts) + date_part('second', downloadts) ) = 42 and  not ( date_part('year', downloadts) = 2016 )

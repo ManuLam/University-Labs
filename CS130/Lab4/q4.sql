@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE user_agent ~* '.*AppleWebKit/[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.*'

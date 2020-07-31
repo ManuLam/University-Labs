@@ -1,0 +1,1 @@
+﻿SELECT * FROM CS130_2017_Lab4 WHERE log(char_length(appname)) = log(char_length(ip_address)) and filesize >= 100
