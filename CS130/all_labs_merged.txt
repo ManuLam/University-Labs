@@ -1,0 +1,121 @@
+2
+SELECT * FROM cs130lab2 WHERE (car_color = 'Yellow');
+SELECT * FROM cs130lab2 WHERE  parking_day != 'Saturday' and parking_day != 'Sunday';
+SELECT * FROM cs130lab2 WHERE car_model like '%2500';
+SELECT * FROM cs130lab2 WHERE (car_make = 'Toyota') and (car_model = 'Corolla');
+SELECT * FROM cs130lab2 WHERE car_reg like '%MH%' or car_reg like '%KE%'; 
+SELECT * FROM cs130lab2 WHERE car_reg like '16%';
+SELECT * FROM cs130lab2 WHERE (parking_hours >= 4) and (num_occupants >= 3);
+SELECT * FROM cs130lab2 WHERE ((parking_level = 3) and ( parking_day = 'Tuesday')) or (car_color = 'Green');
+SELECT * FROM cs130lab2 WHERE (car_make like 'T%') and (car_model like 'T%') and (parking_day like 'T%');
+SELECT * FROM cs130lab2 WHERE (car_reg like '%-D-%') and (parking_level != 3);
+SELECT * FROM cs130lab2 WHERE (car_reg like '1%1') and (car_make = 'BMW' or car_make = 'Chevrolet');
+
+3
+SELECT Booktitle FROM  CS130_2017_Lab3 WHERE Bookpages (BETWEEN 100 and 200) and Bookpages%2 == 0;
+SELECT * FROM CS130_2017_Lab3 WHERE bookisbn SIMILAR TO '[0|7]%[0|7]';
+SELECT * FROM CS130_2017_Lab3 WHERE booktitle SIMILAR TO '[0-9]*';
+SELECT * FROM CS130_2017_Lab3 WHERE booktitle similar to '%[0-9]%';
+SELECT * FROM CS130_2017_Lab3 WHERE booktitle ~* '.*operative.*web-enabled*';
+SELECT * FROM CS130_2017_Lab3 WHERE custiban ~* '^(IE|CH|ES).*$' and (char_length(custiban) >= 26);
+SELECT * FROM CS130_2017_Lab3 WHERE custiban SIMILAR TO '% [0-9]{3}';
+SELECT * FROM CS130_2017_Lab3 WHERE custiban SIMILAR TO '%[0-9]{4} [0-9]{4} [0-9]{4}%'
+SELECT * FROM CS130_2017_Lab3 WHERE custiban SIMILAR TO '%[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}%'
+SELECT * FROM CS130_2017_Lab3 WHERE (custregion SIMILAR TO 'IE|UK') and (bookprice*(1.12) > 60) and (bookpages >= 100);
+SELECT * FROM CS130_2017_Lab3 WHERE booktext ~* '.*CS130.*CS130.*'
+SELECT * FROM CS130_2017_Lab3 WHERE (log(10, bookpages) BETWEEN 2.2227 and 2.285555);
+
+4
+SELECT * FROM CS130_2017_Lab4 WHERE downloadts BETWEEN '2017-01-21 00:00:00' AND '2017-01-21 23:59:59' 
+SELECT * FROM CS130_2017_Lab4 WHERE downloadts BETWEEN '2016-12-13 00:00:00' AND '2016-12-13 23:59:59' 
+SELECT * FROM CS130_2017_Lab4 WHERE user_agent ~* '.*ubuntu.*linux.*firefox.*'
+SELECT * FROM CS130_2017_Lab4 WHERE user_agent ~* '.*AppleWebKit/[0-9]{1,}\.[0-9]{1,}\.[0-9]{1,}.*'
+SELECT * FROM CS130_2017_Lab4 WHERE (EXTRACT(DOW FROM downloadts) = 0 and (downloadts BETWEEN '2016-01-01 00:00:00' AND '2016-12-31 23:59:59')) and (user_agent ~* '.*Googlebot/2.1..*')
+SELECT * FROM CS130_2017_Lab4 WHERE filename ~* '^[AEIOU].*[AEIOU].mpeg$'
+SELECT * FROM CS130_2017_Lab4 WHERE NOT (filename  ~* '^.*(A|E|I|O|U).*$')
+SELECT * FROM CS130_2017_Lab4 WHERE ((char_length(filename)) % 2 = 0 and (char_length(appname) % 2 = 0)) and filename ~* '.*.mp3$'
+SELECT * FROM CS130_2017_Lab4 WHERE appname ~* '^(A|E|I|O|U){1,}$' 
+SELECT * FROM CS130_2017_Lab4 WHERE ( date_part('month', downloadts) + date_part('day', downloadts) + date_part('hour', downloadts) + date_part('minute', downloadts) + date_part('second', downloadts) ) = 42 and  not ( date_part('year', downloadts) = 2016 )
+SELECT * FROM CS130_2017_Lab4 WHERE filesize >= 400 and (date_part('hour', downloadts) IN (2,3,5,7,11,13,17,19,23) and date_part('month', downloadts) IN (2,3,5,7,11) and date_part('day', downloadts) IN (2,3,5,7,11,13,17,19,23,29,31))
+SELECT * FROM CS130_2017_Lab4 WHERE log(char_length(appname)) = log(char_length(ip_address)) and filesize >= 100
+
+5
+CREATE TABLE cs_lab5(
+car_id SERIAL NOT NULL,
+car_registration VARCHAR(16) NOT NULL,
+direction VARCHAR(12) NOT NULL,
+vehicle_occupants INTEGER NOT NULL,
+entrance_time TIMESTAMP NOT NULL,
+exit_time TIMESTAMP NOT NULL,
+CONSTRAINT complaintsDatabase_pkey
+PRIMARY KEY(car_id) 
+)
+
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('171-KE-2098','Eastbound',3,'2017-01-01 15:15:30','2017-01-01 15:17:50');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('161-CD-987','Westbound',1,'2017-02-13 04:30:20','2017-02-13 04:31:40');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('J19-CS130','Eastbound',4,'2017-05-31 18:00:00','2017-05-31 18:02:40');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('12-WD-1767','Westbound',2,'2017-05-07 07:40:10','2017-05-07 07:41:50');
+
+DROP TABLE IF EXISTS cs_lab5
+
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('12-WD-1767','Eastbound',2,'2017-05-07 14:59:00','2017-05-07 15:00:50');
+
+--TRUNCATE cs_lab5;
+SELECT * from cs_lab5;
+
+--DELETE FROM cs_lab5 WHERE direction = 'Eastbound'
+DELETE FROM cs_lab5
+
+TRUNCATE cs_lab5;
+
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('171-KE-2980','Eastbound',3,'2017-01-01 15:15:30','2017-01-01 15:17:50');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('161-CD-987','Westbound',1,'2017-02-13 04:30:20','2017-02-13 04:31:40');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('J19-CS130','Eastbound',4,'2017-05-31 18:00:00','2017-05-31 18:02:40');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('12-WD-1767','Westbound',2,'2017-05-07 07:40:10','2017-05-07 07:41:50');
+
+ALTER TABLE cs_lab5 ADD COLUMN Speeding VARCHAR(30);
+UPDATE cs_lab5 SET Speeding = NULL;
+
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('161-KE-1234', 'Eastbound', 2, '2017-10-26 10:34:00', '2017-10-26 10:37:00');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('171-D-9988', 'Eastbound', 2, '2017-10-26 10:35:00', '2017-10-26 10:38:00');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('161-KE-1234', 'Westbound', 2, '2017-10-26 12:34:00', '2017-10-26 12:36:30');
+INSERT INTO cs_lab5
+(car_registration, direction, vehicle_occupants, entrance_time,exit_time)
+VALUES
+('171-D-9988', 'Westbound', 2, '2017-10-26 12:35:00', '2017-10-26 12:37:30');
