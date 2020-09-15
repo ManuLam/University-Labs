@@ -1,0 +1,164 @@
+public class C {
+  public static int Sum(int[] a)
+    ensures result == sum{int i in (0: a.Length); a[i]};
+  {
+    int s = 0;
+    for (int n = 0; n < a.Length; n++)
+      invariant n <= a.Length;
+      invariant s == sum{int i in (0: n); a[i]};
+    {
+      s += a[n];
+    }
+    return s;
+  }
+}
+
+public class C {
+  public static int Product(int[]! a)
+    ensures result == product{int i in (0: a.Length); a[i]};
+  {
+    int ans = 1;
+    for (int n = 0; n < a.Length; n++)
+      invariant n <= a.Length;
+      invariant ans == product{int i in (0: n); a[i]};
+     {
+          ans *= a[n];
+     }
+     return ans;
+  } 
+}
+
+public class C {
+ 
+   public static int Minimum(int[]! a)
+    ensures result == min{int i in (0 : a.Length); a[i]};
+    { 
+       int m = System.Int32.MaxValue;
+       
+       for (int n = 0; n < a.Length; n++)
+       invariant n <= a.Length;
+       invariant m == min{int i in (0: n); a[i]};
+       {  
+         if(a[n] < m) m = a[n];
+       }
+       return m;
+    }
+}
+
+public class C {
+
+        public static int Count(int[]! a)
+        ensures result == count{int i in (0 : a.Length); a[i]%5 ==0};
+  { 
+                int c = 0;
+
+    for (int n = 0; n < a.Length; n++)
+    invariant n <= a.Length;
+    invariant c == count{int i in (0: n); a[i]%5 ==0};
+    { 
+      if(a[n] % 5 == 0) c++;
+    }
+    return c;
+  }
+
+}
+
+public class C {
+  public static int Sum(int k)
+    requires 0 <= k;
+    ensures result == sum{int i in (0:k); i};
+  {
+    int s = 0;
+    for (int n = 0; n < k; n++)
+      invariant n <= k;
+      invariant s == sum{int i in (0:n); i};
+    {
+      s += n;
+    }
+    return s;
+  }
+}
+
+ using Microsoft.Contracts;
+ using System;
+
+public class Factorial
+{
+  public int factorial(int n)
+  requires 0 <= n;
+  ensures result == ((n == 0) ? 1 : product{int j in (1..n); j}); 
+  {
+        if (n == 0) return 1;
+        else       
+        {
+          int f = 1;
+          int i = 1;
+          while(i < n+1)
+          invariant 1 <= i && i <= n+1;
+          invariant f == product{int j in (1..i-1); j};
+          {   
+              f *= i++;
+          }
+          return f;   
+        }
+  }
+}
+
+public class Summing {
+  public static int SeqSum(int[] a, int i, int j)
+  requires 0 <= i  &&  i <= j  &&  j <= a.Length;
+  ensures result == sum{int k in (i:j); a[k]}; 
+  {
+    int s = 0;
+    for (int n = i; n < j; n++)
+    invariant i <= n && n <= j;
+    invariant s == sum{int k in (i:n); a[k]};
+    {
+      s += a[n];
+    }
+
+    return s;
+  }
+}
+
+class C {
+  bool LinearSearch(int[] a, int key)
+    ensures result == exists{int i in (0: a.Length); a[i] == key};
+  {
+    int n = a.Length;
+    do
+      invariant 0 <= n && n <= a.Length;
+      invariant forall{int i in (n: a.Length); a[i] != key};
+    {
+      n--;
+      if (n < 0) {
+        break;
+      }
+    } while (a[n] != key);
+    return 0 <= n;
+  }
+}
+
+public class C {
+  
+     public static int BLS(int[]! a, int key)
+    {
+      ensures result == ((n == a.Length) ? -1 : forall{int i in (0: a.Length); a[i] != key});
+      ensures 0 <= result && result < a.Length;
+      int n=0;
+
+      while (n < a.Length && a[n] != key)
+      invariant 0 <= n && n <= a.Length;
+      invariant forall{int i in (0: n); a[i] != key};
+      {
+        n++;
+      }
+
+      if (n == a.Length)
+
+      return -1;
+
+      else return n;
+
+  }
+}
