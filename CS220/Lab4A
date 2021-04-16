@@ -1,0 +1,17 @@
+//: version "2.0-b10"
+//: property encoding = "iso8859-1"
+//: property locale = "en"
+//: property prefix = "_GG"
+//: property timingViolationMode = 2
+//: property initTime = "0 ns"
+
+`timescale 1ns/1ns
+
+//: /netlistBegin main
+module main;    //: root_module
+//: enddecls
+
+
+endmodule
+//: /netlistEnd
+
