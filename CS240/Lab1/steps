@@ -1,0 +1,30 @@
+mkdir CS240
+vi file1
+vi file2
+vi file3
+vi file4
+
+cp file1 file1.bak
+cp file2 file2.bak
+cp file3 file3.bak
+cp file4 file4.bak
+
+
+
+vi file1.bak
+This is a copy of file1
+
+cmp file1 file1.bak
+cmp file2 file2.bak
+
+ls /
+
+ls /d*  < Lists all the files in dir 'd*', drivers and processes
+
+rm *.bak
+
+mkdir text
+
+mv file* text
+
+ls text
