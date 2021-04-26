@@ -1,0 +1,11 @@
+﻿Build started 2/20/2018 7:56:26 PM.
+     1>Project "E:\CS253\Visual Studio\Lab3\p3\MASM_FP\MASM_FP\MASM_FP.vcxproj" on node 2 (ClCompile target(s)).
+     1>ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\MASM_FP.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt MASM_FP.cpp
+         MASM_FP.cpp
+     1>e:\cs253\visual studio\lab3\p3\masm_fp\masm_fp\masm_fp.cpp(2): fatal error C1083: Cannot open precompiled header file: 'Debug\MASM_FP.pch': No such file or directory
+     1>Done Building Project "E:\CS253\Visual Studio\Lab3\p3\MASM_FP\MASM_FP\MASM_FP.vcxproj" (ClCompile target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.70
